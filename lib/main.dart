@@ -20,11 +20,12 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
+        fontFamily: 'Montserrat',
         primaryColor: Color(0xffffe135),
         accentColor: Color(0xFFFFFFFF),
-        canvasColor: Color(0xffffe135),
+        canvasColor: Colors.white,
         textTheme: TextTheme(
-          headline: TextStyle(fontSize: 36, color: Theme.of(context).accentColor),
+          headline: TextStyle(fontSize: 36, color: Colors.white),
           title: TextStyle(fontSize: 24),
           body1: TextStyle(fontSize: 12),
         ),
