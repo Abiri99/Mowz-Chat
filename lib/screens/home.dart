@@ -5,9 +5,17 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text("Mowz", style: Theme.of(context).textTheme.headline),
+        title: RichText(
+          text: TextSpan(
+            children: [
+              TextSpan(text: "Mowz", style: Theme.of(context).textTheme.headline),
+              TextSpan(text: "Chat", style: Theme.of(context).textTheme.body1)
+            ]
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(
