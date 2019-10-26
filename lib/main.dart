@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import './screens/home.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent, //top bar color
+      statusBarIconBrightness: Brightness.dark, //top bar icons
+      systemNavigationBarColor: Colors.white, //bottom bar color
+      systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
+    )
+  );
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -25,7 +36,7 @@ class MyApp extends StatelessWidget {
         accentColor: Color(0xFFFFFFFF),
         canvasColor: Colors.white,
         textTheme: TextTheme(
-          headline: TextStyle(fontSize: 36, color: Colors.white),
+          headline: TextStyle(fontSize: 36, color: Color(0xff252525)),
           title: TextStyle(fontSize: 24),
           body1: TextStyle(fontSize: 12),
         ),
