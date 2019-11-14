@@ -18,7 +18,7 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           padding: EdgeInsets.only(top: 16),
           decoration: BoxDecoration(color: Colors.white, boxShadow: [
             BoxShadow(
-              color: Colors.black26,
+              color: Colors.black12,
               offset: Offset(0, 5),
               blurRadius: 15,
             ),

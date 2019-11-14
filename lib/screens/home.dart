@@ -36,29 +36,37 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         child: Icon(Icons.add, color: Colors.white),
       ),
       appBar: MyCustomAppBar(
-        height: 150,
+        height: 64,
       ),
-      // appBar: AppBar(
-      //   elevation: 12,
-      //   backgroundColor: Colors.white,
-      //   leading: Container(
-      //     child: ClipRRect(
-      //       borderRadius: BorderRadius.circular(100),
-      //       child: Image.network(
-      //         "https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg-1024x683.jpg",
-      //         fit: BoxFit.cover,
-      //       ),
-      //     ),
-      //   ),
-      //   centerTitle: true,
-      //   title: Text("title"),
-      //   actions: <Widget>[Icon(Icons.settings)],
-      // ),
       body: Container(
         child: Column(
           children: <Widget>[
-            // Header(),
-            SingleChildScrollView()
+            SingleChildScrollView(
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                    padding: EdgeInsets.only(left: 8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                        width: 1,
+                        color: Colors.black12,
+                      ),
+                    ),
+                    width: double.infinity,
+                    height: 40,
+                    child: Row(
+                      children: <Widget>[
+                        Icon(Icons.search, color: Colors.black38,),
+                        SizedBox(width: 8,),
+                        Text("Search conversation ...", style: TextStyle(color: Colors.black38)),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
