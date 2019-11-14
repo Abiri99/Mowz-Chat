@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:mowz/screens/messages.dart';
+import '../widgets/my_custom_appbar.dart';
 
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
+class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   double _elevation = 0.0;
   TabController _tabController;
 
@@ -17,7 +17,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
       });
     } else if (_controller.offset > _controller.position.minScrollExtent) {
       setState(() {
-        _elevation = 8.0;
+        _elevation = 6.0;
       });
     }
   }
@@ -31,37 +31,37 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        bottom: TabBar(
-          controller: _tabController,
-          unselectedLabelColor: Colors.grey,
-          labelColor: Colors.yellow,
-          tabs: <Widget>[
-            Tab(
-              icon: Icon(Icons.message),
-            ),
-            Tab(
-              icon: Icon(Icons.settings),
-            ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Color(0xff9A7DFA),
+        child: Icon(Icons.add, color: Colors.white),
+      ),
+      appBar: MyCustomAppBar(
+        height: 150,
+      ),
+      // appBar: AppBar(
+      //   elevation: 12,
+      //   backgroundColor: Colors.white,
+      //   leading: Container(
+      //     child: ClipRRect(
+      //       borderRadius: BorderRadius.circular(100),
+      //       child: Image.network(
+      //         "https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg-1024x683.jpg",
+      //         fit: BoxFit.cover,
+      //       ),
+      //     ),
+      //   ),
+      //   centerTitle: true,
+      //   title: Text("title"),
+      //   actions: <Widget>[Icon(Icons.settings)],
+      // ),
+      body: Container(
+        child: Column(
+          children: <Widget>[
+            // Header(),
+            SingleChildScrollView()
           ],
         ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        elevation: _elevation,
-        title: RichText(
-          text: TextSpan(children: [
-            TextSpan(text: "Mowz", style: Theme.of(context).textTheme.headline),
-            TextSpan(text: "Chat", style: Theme.of(context).textTheme.body1)
-          ]),
-        ),
       ),
-      body: TabBarView(
-        children: <Widget>[
-          Messages(_scrollListener),
-          Messages(_scrollListener)
-        ],
-        controller: _tabController,
-      )
     );
   }
 }

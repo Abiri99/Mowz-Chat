@@ -8,7 +8,7 @@ void main() {
     SystemUiOverlayStyle(
       statusBarColor: Colors.transparent, //top bar color
       statusBarIconBrightness: Brightness.dark, //top bar icons
-      systemNavigationBarColor: Colors.transparent, //bottom bar color
+      systemNavigationBarColor: Color(0xfff8f9fc), //bottom bar color
       systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
     )
   );
@@ -34,11 +34,11 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Montserrat',
         primaryColor: Color(0xffffe135),
         accentColor: Color(0xFFFFFFFF),
-        canvasColor: Colors.white,
+        canvasColor: Color(0xfff8f9fc),
         textTheme: TextTheme(
-          headline: TextStyle(fontSize: 36, color: Color(0xff252525)),
-          title: TextStyle(fontSize: 24),
-          body1: TextStyle(fontSize: 12),
+          headline: TextStyle(fontSize: 36, color: Colors.white, fontWeight: FontWeight.bold),
+          title: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
+          body1: TextStyle(fontSize: 12, color: Colors.white),
         ),
         primarySwatch: Colors.blue,
       ),

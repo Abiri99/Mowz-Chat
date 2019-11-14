@@ -39,7 +39,7 @@ class _MessagesState extends State<Messages> {
                 borderRadius: BorderRadius.all(Radius.circular(4)),
                 boxShadow: [
                   BoxShadow(
-                      color: Colors.black26, blurRadius: 15, spreadRadius: 0.1)
+                      color: Colors.black12, blurRadius: 15, spreadRadius: 0.1)
                 ]),
             child: Text(
               "profile data",
@@ -54,7 +54,7 @@ class _MessagesState extends State<Messages> {
                 borderRadius: BorderRadius.all(Radius.circular(4)),
                 boxShadow: [
                   BoxShadow(
-                      color: Colors.black26, blurRadius: 15, spreadRadius: 0.1)
+                      color: Colors.black12, blurRadius: 15, spreadRadius: 0.1)
                 ]),
             padding: const EdgeInsets.all(16),
             margin: const EdgeInsets.only(right: 24, left: 24, top: 16),
@@ -71,7 +71,7 @@ class _MessagesState extends State<Messages> {
                 borderRadius: BorderRadius.all(Radius.circular(4)),
                 boxShadow: [
                   BoxShadow(
-                      color: Colors.black26, blurRadius: 15, spreadRadius: 0.1)
+                      color: Colors.black12, blurRadius: 15, spreadRadius: 0.1)
                 ]),
             padding: const EdgeInsets.all(16),
             margin: const EdgeInsets.only(right: 24, left: 24, top: 16),
